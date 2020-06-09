@@ -32,8 +32,8 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={site.siteMetadata.title}
+      titleTemplate={`%s.com`}
       meta={[
         {
           name: `description`,
@@ -41,7 +41,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: `og:description`,
@@ -61,14 +61,17 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,700&display=swap" rel="stylesheet" />
+    </Helmet>
   )
 }
 
@@ -82,7 +85,6 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO
