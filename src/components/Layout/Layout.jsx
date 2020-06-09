@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from '../components/Seo'
+import SEO from '../Seo/Seo'
 import { createGlobalStyle } from "styled-components"
 
 import 'modern-normalize';
@@ -14,17 +14,16 @@ const GlobalStyle = createGlobalStyle`
   h4, 
   h5, 
   h6 {
-    font-family: 'IBM Plex Mono';
-    color: black;
+    font-family: 'Helvetica Neue';
   }
 
   p {
     font-family: 'Roboto';
-    color: black;
   }
 
   body {
-    background-color: paleturquoise;
+    background-color: black;
+    color: white;
   }
 
 `
