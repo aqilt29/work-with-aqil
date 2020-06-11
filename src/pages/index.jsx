@@ -1,9 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout"
+import { Header, Image, Layout } from "../components"
 
 const IndexPage = () => (
   <>
     <Layout>
+      <Header />
+      <Image />
       <h3>Work With Aqil</h3>
       <div>
         <p>Hello Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, porro pariatur dolorum magni, mollitia veritatis earum totam id, nisi repellat dolores. Aliquid doloribus fugit labore excepturi libero dicta consequatur rem?</p>
