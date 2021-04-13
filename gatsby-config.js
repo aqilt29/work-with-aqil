@@ -5,6 +5,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -13,5 +16,15 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `inter`,
+          'Montserrat\:100'
+        ],
+        display: 'swap'
+      }
+    }
   ],
 };
