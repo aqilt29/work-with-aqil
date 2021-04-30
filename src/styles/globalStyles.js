@@ -8,9 +8,15 @@ import StardomFont2 from '../styles/fonts/Stardom.woff2';
 import compressedLA from '../images/compressedLA.jpg'
 
 const GlobalStyle = createGlobalStyle`
-  * {
-  padding: 0;
-  margin: 0;
+  
+  html {
+  box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
   }
 
   @font-face {
@@ -22,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
 
   body, html {
     max-width: 100vw;
-    /* background: white; */
     overflow-x: hidden;
   }
 
