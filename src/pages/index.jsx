@@ -11,6 +11,7 @@ import computerVaporGif from '../images/computervapor.gif'
 // import first5000days from '../images/first5000days.jpg'
 
 import { resources } from '../utils/resources';
+import { Header } from "../components/header/index.jsx";
 
 const HeroText = styled.h1`
   font-size: 8em;
@@ -29,29 +30,7 @@ const HeroContainer = styled.div`
   height: 550px;
 `;
 
-const TopBar = styled.div`
-  letter-spacing: .1em;
-  border-top: none;
-  border-bottom: 2px solid black;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
 
-  @media ${device.tablet} {
-    padding: 0;
-    justify-content: flex-start;
-  }
-`;
-
-const TitleHolder = styled.div`
-  display: contents;
-  
-  @media ${device.tablet} {
-    display: block;
-    border-right: 2px solid black;
-    padding: 2em;
-  }
-`;
 
 const MainGif = styled.img`
   -webkit-transform: scaleX(-1);
@@ -115,50 +94,8 @@ const BigList = styled.li`
 const IndexPage = () => {
   return (
     <Layout>
-      <TopBar>
-        <TitleHolder>
-          <h3>
-            Work With Aqil
-          </h3>
-        </TitleHolder>
-      </TopBar>
-      <HeroContainer>
-        <HeroText>
-          Work With Web3
-        </HeroText>
-        <MainGif src={programmingGif} alt="I do program sometimes, blockchain." />
-      </HeroContainer>
-      <TextBlurbContainer>
-        <TextHeader>About Web 3.0</TextHeader>
-        <BlurbText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur eum est quis corporis exercitationem officia obcaecati iste ducimus perferendis!</BlurbText>
-        <BlurbText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur eum est quis corporis exercitationem officia obcaecati iste ducimus perferendis!</BlurbText>
-        <EthGif src={staticEthGif} slt="Ethereum Gif" />
-        <BlurbText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur eum est quis corporis exercitationem officia obcaecati iste ducimus perferendis!</BlurbText>
-        <BlurbText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur eum est quis corporis exercitationem officia obcaecati iste ducimus perferendis!</BlurbText>
-        <EthGif src={blockchaingif} slt="Blockchain Gif" />
-        <BlurbText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur eum est quis corporis exercitationem officia obcaecati iste ducimus perferendis!</BlurbText>
-        <TextHeader size="3em">Contact Me</TextHeader>
-        <ul>
-          <BigList>
-            <a href="mailto:me@workwithaqil.com">Email</a></BigList>
-          <BigList>
-            <a target="__blank" href="https://twitter.com/workwithaqil">@Twitter</a>
-          </BigList>
-        </ul>
-        <EthGif style={{ marginTop: '4em', marginBottom: '4em' }} src={computerVaporGif} />
-        <TextHeader size="3em">Reading</TextHeader>
-        <ul>
-          {
-            resources.map(({title, link, alt}) => (
-              <BigList>
-                <a target="__blank" alt={alt} href={link}>{title}</a>
-              </BigList>
-            ))
-          }
-        </ul>
-        {/* <TextHeader size="3em">Projects</TextHeader> */}
-        {/* <EthGif src={first5000days}/> */}
-      </TextBlurbContainer>
+      <Header />
+      
     </Layout>
   )
 }
