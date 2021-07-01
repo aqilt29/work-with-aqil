@@ -10,7 +10,7 @@ import compressedLA from '../images/compressedLA.jpg'
 const GlobalStyle = createGlobalStyle`
   
   html {
-  box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   *, *:before, *:after {
