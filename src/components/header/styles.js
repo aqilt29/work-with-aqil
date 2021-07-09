@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import styled from 'styled-components';
 import { device } from '../../styles/devices';
 
@@ -22,5 +23,13 @@ export const TitleHolder = styled.div`
     display: block;
     border-right: 2px solid black;
     padding: 2em;
+  }
+`;
+
+export const StyledHeaderLink = styled(Link)`
+  text-decoration: none;
+
+  &:visited {
+    color: #000;
   }
 `;

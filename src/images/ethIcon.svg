@@ -1,4 +1,4 @@
-<svg width="500" height="500" viewbox="0 0 500 500" id="svg1">
+<svg id="svg1">
   <defs>
     <pattern id="Pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
       <Line x1="0" y1="0" x2="25" y2="0" stroke="gray" stroke-width="1"></Line>
