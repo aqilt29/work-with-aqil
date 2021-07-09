@@ -1,17 +1,21 @@
 import React from 'react';
-import { IconWrapper, LinkBox, LinksBarContainer, LinkText } from './styles';
+import { StyledLink, IconWrapper, LinkBox, LinksBarContainer, LinkText } from './styles';
 import EthSvg from '../../images/ethShell.svg'
 
-const linkNames = ['Reading', 'Cool Stuff', 'Writing'];
+const linkNames = ['Reading', 'Cool Stuff', 'Projects'];
 
 const LinkItem = ({name}) => {
   return (
-    <LinkBox>
-      <LinkText>{name}</LinkText>
-      <IconWrapper>
-        <EthSvg />
-      </IconWrapper>
-    </LinkBox>
+    <StyledLink
+      to={`/${name.toLowerCase().replace(/ /g, '')}`}
+    >
+      <LinkBox>
+        <LinkText>{name}</LinkText>
+        <IconWrapper>
+          <EthSvg />
+        </IconWrapper>
+      </LinkBox>
+    </StyledLink>
   )
 }
 

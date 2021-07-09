@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 import { device } from '../../styles/devices';
+import { Link } from 'gatsby';
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export const LinksBarContainer = styled.div`
   border-top: 2px solid black;
-  
+
   @media ${device.laptop} {
     display: flex;
     flex-direction: row;
@@ -22,6 +27,10 @@ export const IconWrapper = styled.div`
 
   @media ${device.laptop} {
     padding-right: 3em;
+
+    svg {
+      height: 4em;
+    }
   }
 `;
 
@@ -39,10 +48,16 @@ export const LinkBox = styled.div`
     padding-top: 4em;
   }
 
+  &:hover {
+    text-decoration: underline;
+  }
+
 `;
 
 export const LinkText = styled.h1`
-  text-align: center;  
+  text-align: center;
+  color: black;
 
+  
 `;
 
