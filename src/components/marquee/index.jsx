@@ -19,10 +19,6 @@ const coinMarketText = async () => {
     redirect: 'follow',
   };
 
-  // for (var i = 1; i < 3; i++) {
-  //   coinMarqueeText += 'COIN MARKET DATA '
-  // }
-  
   let { data: coinAPIData } = await fetch(`https://api.coincap.io/v2/assets?limit=7`, requestOptions)
     .then(response => response.text())
     .then(responseText => JSON.parse(responseText))
