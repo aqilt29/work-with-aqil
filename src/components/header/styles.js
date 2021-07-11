@@ -18,6 +18,8 @@ export const TopBar = styled.div`
 
 export const TitleHolder = styled.div`
   display: contents;
+  background-color: #fff;
+  z-index: 2;
   
   @media ${device.tablet} {
     display: block;
