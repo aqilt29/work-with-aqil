@@ -5,6 +5,7 @@ import {
   BioText,
   HeroContainer,
   HeroImg,
+  MailButton,
   
 } from './styles';
 import staticEthGif from '../../images/staticethgif.gif'
@@ -19,6 +20,11 @@ const Hero = () => {
         <BioHeader>What About</BioHeader>
         <BioText>{bio2}</BioText>
         <BioText>{bio}{<a target="__Blank" href="https://finematics.com/history-of-defi-explained" >DeFi Summer</a>}{bio1}</BioText>
+        <MailButton>
+          <a href="mailto:me@workwithaqil.com">
+            Contact Me
+          </a>
+        </MailButton>
       </BioContainer>
     </HeroContainer>
   )
