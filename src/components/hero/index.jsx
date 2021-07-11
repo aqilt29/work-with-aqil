@@ -5,6 +5,7 @@ import {
   BioText,
   HeroContainer,
   HeroImg,
+  MailAnchor,
   MailButton,
   
 } from './styles';
@@ -20,11 +21,12 @@ const Hero = () => {
         <BioHeader>What About</BioHeader>
         <BioText>{bio2}</BioText>
         <BioText>{bio}{<a target="__Blank" href="https://finematics.com/history-of-defi-explained" >DeFi Summer</a>}{bio1}</BioText>
-        <MailButton>
-          <a href="mailto:me@workwithaqil.com">
+        <MailAnchor
+          href="mailto:me@workwithaqil.com?subject=Hi I saw your website &body=Hi Aqil,">
+          <MailButton>
             Contact Me
-          </a>
-        </MailButton>
+          </MailButton>
+        </MailAnchor>
       </BioContainer>
     </HeroContainer>
   )

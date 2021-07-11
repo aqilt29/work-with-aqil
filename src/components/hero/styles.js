@@ -68,6 +68,9 @@ export const MailButton = styled.div`
     text-decoration: none;
     color: white;
   }
+`;
 
-
+export const MailAnchor = styled.a`
+  text-decoration: none;
+  color: white;
 `;
