@@ -35,6 +35,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const LinkBox = styled.div`
+  position: relative;
   padding: 1em;
   border-bottom: 2px solid black;
   display: flex;
@@ -49,7 +50,36 @@ export const LinkBox = styled.div`
   }
 
   &:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+
+    & > h1 {
+      color: white;
+    }
+
+    & svg {
+      fill: white;
+    }
+  
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: black;
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+    /* z-index: 0; */
   }
 
 `;
@@ -57,7 +87,6 @@ export const LinkBox = styled.div`
 export const LinkText = styled.h1`
   text-align: center;
   color: black;
-
   
 `;
 
