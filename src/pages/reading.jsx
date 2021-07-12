@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { device } from '../styles/devices';
+import { BlogList } from '../components/blogList';
 
 const StyledHeader = styled.div`
   text-align: center;
@@ -14,14 +15,14 @@ const StyledHeader = styled.div`
 `;
 
 const ReadingPage = ({ data: { allWpPost } }) => {
-  console.log(allWpPost.nodes);
-
   return (
     <Layout>
       <StyledHeader>
         <h1>Up To Date on Crypto</h1>
       </StyledHeader>
-      
+      <BlogList
+        allBlogs={allWpPost.nodes}
+      />
     </Layout>
   )
 };
@@ -34,18 +35,22 @@ export const query = graphql`
     nodes {
       title
       slug
+      excerpt
       featuredImage {
         node {
           title
           localFile {
             childImageSharp {
               gatsbyImageData(
+                height: 200
                 width: 200
                 placeholder: BLURRED
+                transformOptions: {
+                  fit: COVER
+                }
               )
             }
           }
-          
         }
       }
       author {
@@ -57,4 +62,5 @@ export const query = graphql`
     }
   }
 }
+
 `;
