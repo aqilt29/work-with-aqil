@@ -26,6 +26,6 @@ export const bio1 = `
 `;
 
 export const bio2 = `
-  This website is a collection of interesting things, project's I'm working on,
+  This website is a collection of interesting things, projects I'm working on,
   and helpful resources for people looking to learn more.
 `;

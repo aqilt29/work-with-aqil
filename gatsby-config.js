@@ -1,4 +1,5 @@
 require('dotenv').config()
+const siteURL = new URL(process.env.TARGET_ADDRESS)
 
 module.exports = {
   siteMetadata: {
@@ -41,6 +42,14 @@ module.exports = {
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.CLOUD_BUCKET_NAME,
+        protocol: siteURL.protocol.slice(0, -1),
+        hostname: siteURL.hostname,
+      },
     }
   ],
 };
