@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: "Work With Aqil",
@@ -15,6 +17,12 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: process.env.GATSBY_WP_URL,
+      }
     },
     {
       resolve: "gatsby-plugin-react-svg",
