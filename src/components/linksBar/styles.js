@@ -87,6 +87,6 @@ export const LinkBox = styled.div`
 export const LinkText = styled.h1`
   text-align: center;
   color: black;
-  
+  margin-top: .25em;
 `;
 
