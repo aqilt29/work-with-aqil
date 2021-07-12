@@ -43,3 +43,34 @@ export const BioHeader = styled.h1`
     /* display: none; */
   }
 `;
+
+export const MailButton = styled.div`
+  border: 2px solid white;
+  padding: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  font-style: bold;
+  width: 100%;
+  background-color: black;
+
+  &:hover {
+    border: 2px solid black; 
+    background-color: white;
+    color: black;
+
+    & > a {
+      color: black;
+    }
+  }
+
+  & > a {
+    text-decoration: none;
+    color: white;
+  }
+`;
+
+export const MailAnchor = styled.a`
+  text-decoration: none;
+  color: white;
+`;
