@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from 'styled-components';
 
 import Layout from "../components/layout/index.jsx"
-import { Header } from "../components/header/index.jsx";
+// import { Header } from "../components/header/index.jsx";
 import Hero from "../components/hero/index.jsx"
 import { LinksBar } from '../components/linksBar/index.jsx'
 
@@ -17,7 +17,7 @@ const EthGif = styled.img`
 const IndexPage = () => {
   return (
     <Layout>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <LinksBar />
     </Layout>

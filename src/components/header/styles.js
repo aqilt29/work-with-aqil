@@ -9,10 +9,12 @@ export const TopBar = styled.div`
   padding: 1em;
   display: flex;
   justify-content: center;
+  margin-bottom: 2.5em;
 
   @media ${device.tablet} {
     padding: 0;
     justify-content: flex-start;
+    margin-bottom: 0;
   }
 `;
 
