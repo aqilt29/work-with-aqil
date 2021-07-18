@@ -1,6 +1,6 @@
 require('dotenv').config()
 const siteURL = new URL(process.env.TARGET_ADDRESS)
-
+console.log(process.env.GATSBY_WP_URL)
 module.exports = {
   siteMetadata: {
     title: "Work With Aqil",

@@ -1,11 +1,8 @@
 //  Apply all of the global styles here
 
 import { createGlobalStyle } from 'styled-components';
-// import { normalize } from 'styled-normalize'
 import StardomFont from '../styles/fonts/Stardom.woff';
 import StardomFont2 from '../styles/fonts/Stardom.woff2';
-
-import compressedLA from '../images/compressedLA.jpg'
 
 const GlobalStyle = createGlobalStyle`
   

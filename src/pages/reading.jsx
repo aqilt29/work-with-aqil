@@ -36,27 +36,20 @@ export const query = graphql`
       title
       slug
       excerpt
-      featuredImage {
-        node {
-          title
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                height: 200
-                width: 200
-                placeholder: BLURRED
-                transformOptions: {
-                  fit: COVER
-                }
-              )
-            }
-          }
-        }
-      }
       author {
         node {
           firstName
           lastName
+        }
+      }
+      featuredImage {
+        node {
+          altText
+          localFile {
+            childImageSharp {
+              gatsbyImageData(placeholder: TRACED_SVG)
+            }
+          }
         }
       }
     }

@@ -6,23 +6,32 @@ import { device } from '../../styles/devices';
 const BlogListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0em 2em;
+  padding: 0em 1.25em;
 
   @media ${device.tablet} {
     flex-direction: row;
   }
 `;
 
+const BlogTitle = styled.h2`
+  margin-top: .25em;
+`;
+
 const BlogPreview = ({ blog }) => {
-  const blogThumbnail = getImage(blog.featuredImage.node.localFile)
-  console.log(blog)
+  
+  const imgSource = getImage(blog.featuredImage.node.localFile)
+  const { excerpt } = blog;
+  console.log(excerpt)
+
   return (
     <div style={{ marginBottom: '2em' }}>
-      <h3>{blog.title}</h3>
       <div>
-        <GatsbyImage
-          image={blogThumbnail} 
+        <GatsbyImage 
+          image={imgSource}
+          alt={blog.featuredImage.node.altText}
         />
+        <BlogTitle>{blog.title}</BlogTitle>
+        <div __dangerouslysetinnerhtml={{ __html: excerpt }}></div>
       </div>
     </div>
   )
