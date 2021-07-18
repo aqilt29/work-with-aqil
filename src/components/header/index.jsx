@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopMarquee } from '../marquee';
+import { MarqueeTicker } from '../marquee';
 import {
   TopBar,
   TitleHolder,
@@ -14,7 +14,7 @@ export const Header = () => {
             <h3>Work With Aqil</h3>
           </StyledHeaderLink>
         </TitleHolder>
-        <TopMarquee />
+        <MarqueeTicker position={'top'}/>
     </TopBar>
   )
 }

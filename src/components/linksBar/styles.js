@@ -8,8 +8,11 @@ export const StyledLink = styled(Link)`
 
 export const LinksBarContainer = styled.div`
   border-top: 2px solid black;
+  /* margin-bottom: 3em; */
+  
 
   @media ${device.laptop} {
+    /* margin-bottom: 0; */
     display: flex;
     flex-direction: row;
     position: absolute;

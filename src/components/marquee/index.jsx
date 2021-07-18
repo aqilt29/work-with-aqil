@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Marquee from 'react-marquee';
 
-import { TopMarqueeContainer } from './styles';
+import { MarqueeContainer } from './styles';
 
 const MarqueeText = () => {
   let text = '';
@@ -34,7 +34,7 @@ const coinMarketText = async () => {
   return coinMarqueeText;
 }
 
-export const TopMarquee = () => {
+export const MarqueeTicker = ({ position }) => {
   const [coinDataText, setCoinDataText] = useState(MarqueeText());
   
   useEffect(() => {
@@ -47,12 +47,12 @@ export const TopMarquee = () => {
   }, [])
 
   return (
-    <TopMarqueeContainer>
+    <MarqueeContainer position={position} >
       <Marquee
         text={coinDataText}
         loop={true}
         hoverToStop={true}
       />
-    </TopMarqueeContainer>
+    </MarqueeContainer>
   )
 }
