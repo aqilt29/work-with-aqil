@@ -5,6 +5,7 @@ import {
   TitleHolder,
   StyledHeaderLink,
   NavHeaderText,
+  MobileBackgroundMarquee,
 } from './styles'
 
 export const Header = () => {
@@ -16,6 +17,7 @@ export const Header = () => {
           </StyledHeaderLink>
         </TitleHolder>
         <MarqueeTicker position={'top'}/>
+        <MobileBackgroundMarquee></MobileBackgroundMarquee>
     </TopBar>
   )
 }

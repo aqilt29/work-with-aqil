@@ -8,6 +8,7 @@ import { BlogList } from '../components/blogList';
 const StyledHeader = styled.div`
   text-align: center;
   margin-bottom: 2em;
+  margin-top: 4.5em;
 
   @media ${device.tablet} {
     margin-top: 2em;

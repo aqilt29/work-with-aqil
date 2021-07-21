@@ -9,6 +9,7 @@ import {
   BlogTitle,
   BlogPreviewContainer,
 } from './styles';
+import { Link } from 'gatsby';
 
 
 const BlogPreview = ({ blog }) => {
@@ -17,18 +18,20 @@ const BlogPreview = ({ blog }) => {
   const { excerpt } = blog;
 
   return (
-    <BlogPreviewContainer>
-      <GatsbyImage 
-        image={imgSource}
-        alt={blog.featuredImage.node.altText}
-      />
-      <BlogTitle>{blog.title}</BlogTitle>
-      <ExcerptContainer>
-        {
-          parse(excerpt)
-        }
-      </ExcerptContainer>
-    </BlogPreviewContainer>
+    <Link to={`${blog.slug}`} style={{ textDecoration: 'none', color: 'black' }}>
+      <BlogPreviewContainer>
+        <GatsbyImage 
+          image={imgSource}
+          alt={blog.featuredImage.node.altText}
+        />
+        <BlogTitle>{blog.title}</BlogTitle>
+        <ExcerptContainer>
+          {
+            parse(excerpt)
+          }
+        </ExcerptContainer>
+      </BlogPreviewContainer>
+    </Link>
   )
 }
 
@@ -37,15 +40,6 @@ export const BlogList = ({ allBlogs }) => {
   return (
     <>
       <BlogListContainer>
-        {
-          allBlogs.map((blog, idx) => <BlogPreview blog={blog} key={`${idx}`} />)
-        }
-        {
-          allBlogs.map((blog, idx) => <BlogPreview blog={blog} key={`${idx}`} />)
-        }
-        {
-          allBlogs.map((blog, idx) => <BlogPreview blog={blog} key={`${idx}`} />)
-        }
         {
           allBlogs.map((blog, idx) => <BlogPreview blog={blog} key={`${idx}`} />)
         }

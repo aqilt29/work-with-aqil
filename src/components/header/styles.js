@@ -11,6 +11,11 @@ export const TopBar = styled.div`
   justify-content: center;
   margin-bottom: 2.5em;
 
+  position: sticky;
+  top: -1px;
+  z-index: 3;
+  background-color: white;
+
   @media ${device.tablet} {
     padding: 0;
     justify-content: flex-start;
@@ -19,7 +24,7 @@ export const TopBar = styled.div`
 `;
 
 export const TitleHolder = styled.div`
-  display: contents;
+  /* display: contents; */
   background-color: #fff;
   z-index: 2;
   position: relative;
@@ -67,4 +72,19 @@ export const StyledHeaderLink = styled(Link)`
 
 export const NavHeaderText = styled.h3`
 
+`;
+
+export const MobileBackgroundMarquee = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3em;
+  top: 3.7em;
+  background-color: white;
+  z-index: -2;
+  border-bottom: 2px solid black;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
