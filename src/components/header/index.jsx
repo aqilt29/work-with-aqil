@@ -4,6 +4,7 @@ import {
   TopBar,
   TitleHolder,
   StyledHeaderLink,
+  NavHeaderText,
 } from './styles'
 
 export const Header = () => {
@@ -11,7 +12,7 @@ export const Header = () => {
     <TopBar>
         <TitleHolder>
           <StyledHeaderLink to="/">
-            <h3>Work With Aqil</h3>
+            <NavHeaderText>Work With Aqil</NavHeaderText>
           </StyledHeaderLink>
         </TitleHolder>
         <MarqueeTicker position={'top'}/>

@@ -2,6 +2,7 @@ import React from 'react';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from 'styled-components';
 import { device } from '../../styles/devices';
+import parse from 'html-react-parser';
 
 const BlogListContainer = styled.div`
   display: flex;
@@ -21,7 +22,8 @@ const BlogPreview = ({ blog }) => {
   
   const imgSource = getImage(blog.featuredImage.node.localFile)
   const { excerpt } = blog;
-  console.log(excerpt)
+
+  console.log(parse(excerpt))
 
   return (
     <div style={{ marginBottom: '2em' }}>
@@ -31,7 +33,11 @@ const BlogPreview = ({ blog }) => {
           alt={blog.featuredImage.node.altText}
         />
         <BlogTitle>{blog.title}</BlogTitle>
-        <div __dangerouslysetinnerhtml={{ __html: excerpt }}></div>
+        <div>
+          {
+            parse(excerpt)
+          }
+        </div>
       </div>
     </div>
   )

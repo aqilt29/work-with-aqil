@@ -22,11 +22,38 @@ export const TitleHolder = styled.div`
   display: contents;
   background-color: #fff;
   z-index: 2;
+  position: relative;
   
   @media ${device.tablet} {
     display: block;
     border-right: 2px solid black;
     padding: 2em;
+    
+    &:hover {
+      & h3 {
+        color: white;
+      }
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background-color: black;
+      transition: transform 300ms ease-in-out;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    
+    &:hover::before,
+    &:focus::before {
+      transform: scaleX(1);
+      /* z-index: 0; */
+    }
   }
 `;
 
@@ -36,4 +63,8 @@ export const StyledHeaderLink = styled(Link)`
   &:visited {
     color: #000;
   }
+`;
+
+export const NavHeaderText = styled.h3`
+
 `;
