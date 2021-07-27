@@ -71,7 +71,8 @@ export const StyledHeaderLink = styled(Link)`
 `;
 
 export const NavHeaderText = styled.h3`
-
+  color: #000;
+  text-decoration: none;
 `;
 
 export const MobileBackgroundMarquee = styled.div`

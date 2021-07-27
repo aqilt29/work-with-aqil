@@ -11,6 +11,7 @@ export const HeroContainer = styled.div`
   @media ${device.tablet} {
     flex-direction: row;
     height: 75vh;
+    padding-bottom: 5em;
   }
 `;
 
@@ -32,8 +33,7 @@ export const BioText = styled.p`
 export const BioContainer = styled.div`
   
   @media ${device.tablet} {
-    max-width: 40vw;
-
+    max-width: 50vw;
   }
 `;
 
